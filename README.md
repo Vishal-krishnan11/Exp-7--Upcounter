@@ -44,7 +44,7 @@ endmodule
 // gedit tb7.v
 
 
-
+```
  
 module tb7;
 
@@ -97,7 +97,7 @@ module tb7;
         #20 $finish;
     end
     endmodule
-
+```
 ## Operation / Truth Table
 
 State transition (en = 1, rst = 0 unless noted)
@@ -151,6 +151,7 @@ In DVE:
 The waveform should agree with the state transition table.
 
 ## Expected Result
+<img width="1917" height="1072" alt="Screenshot 2026-11-05 110053" src="https://github.com/user-attachments/assets/fa69056a-d89f-406c-bbd1-5c62f56844e9" />
 
 The 4-bit Synchronous Up-Counter was realized using Verilog HDL, with the characteristic behaviour:
 
@@ -159,30 +160,7 @@ count(next) = count + 1   (when en = 1), wrapping from 1111 to 0000
 The design was compiled and simulated using Synopsys VCS, and the functionality was verified using DVE waveform analysis, matching the expected state transition table.
 
 ## Output
+<img width="1916" height="1076" alt="Screenshot 2026-11-05 110241" src="https://github.com/user-attachments/assets/cbefdbd7-d04c-4301-a084-08e6fff47d6e" />
+
 
 <img width="609" height="173" alt="image" src="https://github.com/user-attachments/assets/34051c7c-087f-4759-a55f-1af528460ca0" />
-
-## Viva-Voce Questions
-
-●	What is the difference between a synchronous counter and a ripple (asynchronous) counter?
-
-●	What is the modulus of this counter, and how is it related to the number of bits?
-
-●	What happens to the count value on overflow, and why is this called 'wrap-around'?
-
-●	What is the purpose of the enable (en) input, and what would happen if it were removed?
-
-●	How would you modify this design to create a down-counter?
-
-●	How would you modify this design to create an up/down counter with a direction control input?
-
-●	What is the difference between a synchronous and an asynchronous reset, and which one is used here?
-
-●	Why is a VCD file generated, and what does $dumpvars(0, tb) do?
-
-●	How would you extend this design to an 8-bit or a mod-10 (decade) counter?
-
-## Result
-
-Thus, the 4-bit Synchronous Up-Counter was designed, implemented using Verilog HDL, successfully simulated using Synopsys VCS, and verified using Synopsys DVE.
-
